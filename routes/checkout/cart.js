@@ -5,7 +5,7 @@ module.exports = (app) => {
     const productsDao = new app.dao.productsDAO(connection);
 
     // Get list of ID of product in cart
-    const productsInCartIds = req.cookies['productsInCart'];
+    const productsInCartIds = req.cookies.productsInCart ? req.cookies.cart.split(',') : [];
 
     if (productsInCartIds.length == 0) {
       res.render('checkout/cart', {

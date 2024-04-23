@@ -13,7 +13,7 @@ function connectionFactory() {
     if (err) {
       console.log(err);
     } else {
-      console.log('Connected to database!');
+      console.log('connected to database in server: ' +conn.config.host );
       conn.release();
     }
   });

@@ -29,7 +29,6 @@ class AppController {
     }));
     this.app.use(cors())
     this.app.use(csrf({cookie: true}));
-    this.app.use(validator());
 
     this.app.engine('hbs', hbs({
       extname: 'hbs',
